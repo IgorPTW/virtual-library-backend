@@ -1,9 +1,9 @@
 package com.love2code.springbootlibrary.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -11,8 +11,6 @@ import java.util.Date;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@ToString
-@EqualsAndHashCode
 public class Review {
 
     @Id

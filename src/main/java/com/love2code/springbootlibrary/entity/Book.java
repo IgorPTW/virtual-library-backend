@@ -1,16 +1,14 @@
 package com.love2code.springbootlibrary.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 
 @Entity
 @Table(name = "book")
 @Getter
 @Setter
 @RequiredArgsConstructor
-@ToString
-@EqualsAndHashCode
 public class Book {
 
     @Id
