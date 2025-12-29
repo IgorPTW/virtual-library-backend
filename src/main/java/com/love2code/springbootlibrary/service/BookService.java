@@ -103,7 +103,7 @@ public class BookService {
                 long differenceInTime = time.convert(d1.getTime() - d2.getTime(),
                         TimeUnit.MILLISECONDS);
 
-                shelfCurrentLoansResponses.add(new ShelfCurrentLoansResponse(book, (int) differenceInTime))
+                shelfCurrentLoansResponses.add(new ShelfCurrentLoansResponse(book, (int) differenceInTime));
             }
         }
         return shelfCurrentLoansResponses;
