@@ -22,14 +22,6 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    @GetMapping("/secure/currentloans")
-    public List<ShelfCurrentLoansResponse> currentLoans(@AuthenticationPrincipal Jwt jwt)
-        throws Exception
-    {
-        String userEmail = jwt.getClaim("email");
-        return bookService.currentLoans(userEmail);
-    }
-
     @GetMapping("/secure/currentloans/count")
     public int currentLoansCount(@AuthenticationPrincipal Jwt jwt) {
         String userEmail = jwt.getClaim("email");
@@ -48,6 +40,14 @@ public class BookController {
                              @RequestParam Long bookId) throws Exception {
         String userEmail = jwt.getClaim("email");
         return bookService.checkoutBook(userEmail, bookId);
+    }
+
+    @GetMapping("/secure/currentloans")
+    public List<ShelfCurrentLoansResponse> currentLoans(@AuthenticationPrincipal Jwt jwt)
+        throws Exception
+    {
+        String userEmail = jwt.getClaim("email");
+        return bookService.currentLoans(userEmail);
     }
 
     @PutMapping("/secure/return")
