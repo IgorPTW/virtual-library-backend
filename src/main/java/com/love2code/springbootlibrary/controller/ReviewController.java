@@ -1,4 +1,4 @@
-package com.love2code.springbootlibrary.config;
+package com.love2code.springbootlibrary.controller;
 
 import com.love2code.springbootlibrary.requestmodels.ReviewRequest;
 import com.love2code.springbootlibrary.service.ReviewService;
